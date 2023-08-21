@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+#wrapper{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    background-color:hsl(217, 54%, 11%) ;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+    width:25%;
+    padding:20px;
+    border-radius:20px;
+    display:flex;
+    flex-direction: column;
+    gap:1.5rem;
+    background-color: hsl(216, 50%, 16%);
+    color:hsl(215, 51%, 70%);
+    box-shadow: 0 0 30px rgb(216, 201, 113);
+
+}
+
+.view{
+    position: absolute;
+    background-color: hsl(178, 100%, 50%,40%);
+    height: 100%;
+    width:100%;
+    top:0;
+    opacity: 0;
+    transition: 0.4s all;
+    border-radius:10px
+}
+
+.img>img{
+    border-radius:10px;
+    width:100%  
+}
+.view:hover{
+    opacity: 1;
+}
+.img{
+    position: relative;
+    width:100%
+}
+
+.eye{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.data{
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+    /* margin:10px auto; */
+    justify-content: flex-start ;
+}
+
+.profile{
+    height:40px;
+    aspect-ratio:1
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap:2rem
+}
+
+.end{
+    display:flex;
+    align-items: center;
+    gap:1rem;
+    justify-content: center;
+}
+
+.card>h2{
+    color:white;
+}
+
+.card>h2:hover{
+    color:hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.card>p{
+    color:hsl(215, 51%, 70%);
+    opacity: 80%;
+    font-weight: lighter;
+}
+
+.details{
+    display:flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
+
+.eth{
+    color:hsl(178, 100%, 50%)
+}
+
+.name{
+    color:white
+}
+
+.name:hover{
+    color:hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px){
+    .container{
+        width:80%
+    }
+}
