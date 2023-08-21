@@ -95,6 +95,7 @@ select {
 }
 .view:hover{
     opacity: 1;
+    cursor:pointer
 }
 .img{
     position: relative;
